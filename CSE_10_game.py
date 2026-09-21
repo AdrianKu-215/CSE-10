@@ -18,3 +18,4 @@ if health == 0:
     slow("you've ran out of health, better luck next time")
     sys.exit()
 slow("your health is ",health,", your attack power is ",attack,", and you currently have ",coins,"coins.")
+
