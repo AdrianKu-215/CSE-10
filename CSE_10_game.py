@@ -1,6 +1,3 @@
-#SecondCheckpoint - Ms. Christine
-
-#GAME IMPORTS
 import random
 import sys
 import time
@@ -9,11 +6,10 @@ def slow(text):
     print(text)
     time.sleep(1.2)
 
-#GAME CONSTANTS
 health = 1000
 attack = 100
 coins = random.randint(100, 150)
-potions = random.randint(1, 99) #it might be a good idea to print the number of potions the player has during the game, and to maybe lower the amount of potions the player has to 40 - because i was playing the game for forever i think i got 99 potions 
+potions = random.randint(1, 40)
 sword = False
 
 def check_death():
@@ -23,7 +19,7 @@ def check_death():
         sys.exit()
 
 name = input("Welcome traveler, you are now in a magical land. Your objective is to defeat the demon king, what is your name : ")
-print("Alright ", name, " your journey begins now, you have ", health, " health, ", attack, " attack power, and ", coins, " coins.")
+print("Alright ", name, " your journey begins now, you have ", health, " health, ", attack, " attack power, and ", coins, " coins, as well as ",potions, " potions to heal yourself.")
 
 if name.lower() == "adrian":
     health += 10000
