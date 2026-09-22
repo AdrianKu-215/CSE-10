@@ -1,3 +1,6 @@
+#SecondCheckpoint - Ms. Christine
+
+#GAME IMPORTS
 import random
 import sys
 import time
@@ -6,10 +9,11 @@ def slow(text):
     print(text)
     time.sleep(1.2)
 
+#GAME CONSTANTS
 health = 1000
 attack = 100
 coins = random.randint(100, 150)
-potions = random.randint(1, 99)
+potions = random.randint(1, 99) #it might be a good idea to print the number of potions the player has during the game, and to maybe lower the amount of potions the player has to 40 - because i was playing the game for forever i think i got 99 potions 
 sword = False
 
 def check_death():
@@ -25,7 +29,7 @@ if name.lower() == "adrian":
     health += 10000
     attack += 10000
     coins += 10000
-    slow("You have been given a special boost for being the creator of this game! You now have " + str(health) + " health, " + str(attack) + " attack power, and " + str(coins) + " coins.")
+    slow("You have been given a special boost for being the creator of this game! You now have " + str(health) + " health, " + str(attack) + " attack power, and " + str(coins) + " coins.") #this is a fun addition - very clever
 
 # ---- Monster 1 ----
 choice1 = input("You encounter a monster, do you want to fight it or run away? (fight/run) : ")
@@ -41,7 +45,7 @@ if choice1.lower() == "fight":
             if monster_health <= 0:
                 slow("You have defeated the monster!")
                 coins += random.randint(10, 50)
-                slow("You have gained some coins! You now have " + str(coins) + " coins.")
+                slow("You have gained some coins! You now have " + str(coins) + " coins.") #nice use of the random function here
                 break
             slow("The monster now has " + str(monster_health) + " health left.")
             slow("The monster attacks you back!")
