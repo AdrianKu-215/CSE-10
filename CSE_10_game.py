@@ -25,23 +25,41 @@ if name.lower() == "adrian":
     health += 10000
     attack += 10000
     coins += 10000
-    slow("You have been given a special boost for being the creator of this game! You now have " + str(health) + " health, " + str(attack) + " attack power, and " + str(coins) + " coins.") #this is a fun addition - very clever
+    slow("You have been given a special boost for being the creator of this game! You now have " + str(health) + " health, " + str(attack) + " attack power, and " + str(coins) + " coins.")
 
 # ---- Monster 1 ----
+slow(r"""
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⢿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠟⣧⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣠⣴⣞⡛⠋⠉⠉⠉⠙⠛⠓⠶⣤⣀⠀⠀⠀⣼⠃⠼⣧⣀⣠⣤⣤⣤⣤⣄⣀⣠⡟⠀⢹⡇⠀⣤⣶⠛⠛⠉⠉⠉⠉⠉⠉⠙⠛⠲⢦⣄⡀⠀⠀⠀⠀⠀
+⠉⠉⠉⠙⠳⣄⠀⠀⠀⠀⠀⠀⢈⣽⠗⠀⢀⣿⡀⠷⠛⠉⠁⠀⠀⠀⠀⠈⠿⠋⠀⠀⣸⠇⠀⠀⠹⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⣦⡀⠀⠀
+⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⣼⠁⠀⢠⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠟⢷⡀⠀⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣤⣤⣬⣻⣦⠀
+⠀⠀⠀⠀⣰⡏⠀⠀⠀⠀⠀⠀⣿⠀⣰⢟⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⡄⠀⣾⡀⠀⠀⠀⠀⠀⠀⠀⢸⠋⠀⠀⠀⠀⠀⠀⠙⠃
+⠀⠀⠀⡴⠿⠖⠒⠶⣦⡀⠀⠀⠹⣧⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣼⠃⠁⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠉⣷⠀⠀⠀⢸⠇⠀⠀⠀⠀⠀⣤⡀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⢠⣤⠾⠋⠁⠀⠀⠀⣠⡶⠒⠓⠶⢦⣄⣷⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣹⣤⠴⠶⣾⠀⠀⠀⠀⠀⢀⢻⠁⠀⠀⠈⠛⠁⠀⠀⠀⠀⠀⠀⠿⠳⢶⣦⣤⣀⠀⣿⠀⠀⠀⠀⠀⠈⠙⠷⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠁⠀⠀⢹⡗⠀⠀⠀⠀⠛⠉⠉⠉⠙⠛⠶⣦⠄⠀⠀⠀⠀⠀⠀⠀⢸⠃⠀⠉⠳⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢦⣤⣀⡀⠀⠀⠀⠀⠀⠀⣀⠀⠀⡶⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣟⢻⡟⠛⠛⠛⠹⣦⢰⡇⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀k
+      
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠾⠃⠀⠀⠀⠀⠹⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      """)
 choice1 = input("You encounter a monster, do you want to fight it or run away? (fight/run) : ")
 if choice1.lower() == "fight":
     slow("You have chosen to fight the monster!")
     slow("The monster has 500 health and 50 attack power.")
     monster_health = 500
     while monster_health > 0:
-        choice2 = input("Do you want to attack or use a potion? (attack/potion) : ")
+        choice2 = input("Do you want to attack, use a potion, or flee? (attack/potion/flee) : ")
         if choice2.lower() == "attack":
             slow("You attack the monster!")
             monster_health -= attack
             if monster_health <= 0:
                 slow("You have defeated the monster!")
                 coins += random.randint(10, 50)
-                slow("You have gained some coins! You now have " + str(coins) + " coins.") #nice use of the random function here
+                slow("You have gained some coins! You now have " + str(coins) + " coins.")
                 break
             slow("The monster now has " + str(monster_health) + " health left.")
             slow("The monster attacks you back!")
@@ -55,6 +73,9 @@ if choice1.lower() == "fight":
                 slow("You used a potion and gained 100 health! You now have " + str(health) + " health left.")
             else:
                 slow("You don't have any potions left!")
+        elif choice2.lower() == "flee":
+            slow("You have fled from the monster!")
+            break
         else:
             slow("Invalid choice, please choose again.")
 else:
@@ -67,7 +88,7 @@ if choice_strong.lower() == "fight":
     slow("The strong monster has 1000 health and 100 attack power.")
     strong_health = 1000
     while strong_health > 0:
-        choice3 = input("Do you want to attack or use a potion? (attack/potion) : ")
+        choice3 = input("Do you want to attack, use a potion, or flee? (attack/potion/flee) : ")
         if choice3.lower() == "attack":
             slow("You attack the strong monster!")
             strong_health -= attack
@@ -88,6 +109,9 @@ if choice_strong.lower() == "fight":
                 slow("You used a potion and gained 100 health! You now have " + str(health) + " health left.")
             else:
                 slow("You don't have any potions left!")
+        elif choice3.lower() == "flee":
+            slow("You have fled from the strong monster!")
+            break
         else:
             slow("Invalid choice, please choose again.")
 else:
@@ -104,7 +128,21 @@ else:
     sys.exit()
 
 # ---- Shop ----
-shop_choice = input("You encounter a shop, do you want to buy a potion for 50 coins or a sword for 100 coins? (potion/sword/none) : ")
+slow(r""" ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⢀⣀⣀⣀⣀⣀⣀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⣀⣀⣀⣀⣀⣀⡀⠀⠀
+⠀⠀⢠⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⡤⡤⡤⡤⡤⡤⡤⡤⡤⡤⡄⠀⠀
+⠀⠀⣿⣿⣿⣿⣿⢻ 
+⠀⠈⠻⠿⠿⠋⣀⠈⠻⠿⠟⢁⡀⠙⠿⠿⠋⢀⡈⠻⠿⠟⠁⣀⠙⠿⠿⠟⠁⠀
+⠀⢸⣷⣦⣶⣿⣿⣿⣶⣤⣶⣿⣿⣷⣦⣴⣾⣿⣿⣶⣤⣶⣿⣿⣿⣶⣴⣾⡇⠀
+⠀⢸⣿⡏⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⣉⡉⢹⣿⠉⣉⣉⣉⣉⣉⢹⣿⡇⠀
+⠀⢸⣿⡇⣿⠉⢉⣩⣭⣽⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⠀⣿⣿⣿⣿⣿⢸⣿⡇⠀
+⠀⢸⣿⡇⣿⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⠀⠿⠿⠿⠿⠿⢸⣿⡇⠀
+⠀⢸⣿⡇⣿⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⠀⠶⠶⠶⠶⠶⢸⣿⡇⠀
+⠀⢸⣿⡇⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⢸⣿⠀⣶⣶⣶⣶⣶⢸⣿⡇⠀
+⠀⢸⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⣿⠀⣿⣿⣿⣿⣿⢸⣿⡇⠀
+⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠉⠉⠉⠉⠉⠈⠉⠁⠀
+      """)
+shop_choice = input("You encounter a shop, do you want to buy a potion for 50 coins or a sword for 200 coins? (potion/sword/none) : ")
 if shop_choice.lower() == "potion":
     if coins >= 50:
         coins -= 50
@@ -113,8 +151,8 @@ if shop_choice.lower() == "potion":
     else:
         slow("You don't have enough coins to buy a potion.")
 elif shop_choice.lower() == "sword":
-    if coins >= 100:
-        coins -= 100
+    if coins >= 200:
+        coins -= 200
         attack += 1000
         sword = True
         slow("You have bought a sword! Your attack power is now " + str(attack) + " and you have " + str(coins) + " coins left.")
@@ -123,8 +161,8 @@ elif shop_choice.lower() == "sword":
 else:
     slow("You have chosen not to buy anything from the shop.")
 
-# ---- Demon king ----
-demon_choice = input("You encounter the demon king, do you want to fight it or run away? (fight/run) : ")
+# ---- Demon king (no fleeing — you must fight) ----
+demon_choice = input("You encounter the demon king. There is no escape — you must fight! (fight) : ")
 if demon_choice.lower() == "fight":
     slow("You have chosen to fight the demon king!")
     slow("The demon king has 2000 health and 200 attack power.")
@@ -152,4 +190,5 @@ if demon_choice.lower() == "fight":
         else:
             slow("Invalid choice, please choose again.")
 else:
-    slow("You have failed your journey, better luck next time.")
+    slow("You cannot run from the demon king! He strikes you down where you stand.")
+    sys.exit()
