@@ -1,3 +1,8 @@
+#Third and Final Checkpoint
+#in the first choice, make sure you have an option for "run" and an else statement for invalid options throughout the game
+#finish adding the rest of your ascii art
+#add useful comments to organize the code
+
 import random
 import sys
 import time
