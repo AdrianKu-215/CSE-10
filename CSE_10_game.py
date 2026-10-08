@@ -7,7 +7,7 @@ def slow(text):
     time.sleep(1.2)
 
 health = 1000
-attack = 100
+attack = 200
 coins = random.randint(100, 150)
 potions = random.randint(1, 40)
 sword = False
